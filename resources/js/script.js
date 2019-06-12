@@ -152,13 +152,12 @@ $(document).ready(function() {
       document.getElementById('btnTop').style.display = 'none';
     }
   };
-});
 
-// =======
-// to the top, button
-// =======
-const goToTop = () => {
-  $('html, body')
-    .stop()
-    .animate({ scrollTop: 0 }, 500);
-};
+  const goToTop = () => {
+    $('html, body')
+      .stop()
+      .animate({ scrollTop: 0 }, 500);
+  };
+
+  $('#btnTop').click(goToTop);
+});
