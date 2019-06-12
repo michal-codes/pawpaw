@@ -134,4 +134,31 @@ $(document).ready(function() {
       $(icon).attr('name', 'menu');
     }
   });
+
+  // =======
+  // to the top, button
+  // =======
+  window.onscroll = function() {
+    scrollFunction();
+  };
+
+  const scrollFunction = () => {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      document.getElementById('btnTop').style.display = 'block';
+    } else {
+      document.getElementById('btnTop').style.display = 'none';
+    }
+  };
 });
+
+// =======
+// to the top, button
+// =======
+const goToTop = () => {
+  $('html, body')
+    .stop()
+    .animate({ scrollTop: 0 }, 500);
+};
